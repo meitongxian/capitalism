@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #080808;
+    --text-primary: #c8c8c8;
+    --text-secondary: #555555;
+    --text-tertiary: #AFAFAF;
+}
+
+@font-face {
+    font-family: "Voyager";
+    src: url('Voyager-Regular.otf') format('opentype');
+}
+
+body {
+    background-color: var(--background);
+}
+
+.display {
+    font-family: "Voyager", "Times New Roman", serif;
+    font-size: 6.5rem;
+}
+
+.mono, sup {
+    font-family: "Fragment Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main, .footnote-wrapper {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 0;
+    margin: 0 3rem 0;
+}
+
+/* .folio-wrapper {
+    position: absolute;
+    height: 100vh;
+    grid-column: 1 / 3;
+    border-right: 1px var(--text-primary) dotted;
+} */
+
+.folio {
+    text-align: right;
+    color: var(--text-primary);
+    margin-top: 1.5rem;
+    margin-right: 1.5rem;
+    grid-column: 1 / 3;
+}
+
+.body-wrapper {
+    grid-column: 3 / 13;
+    line-height: 1.1;
+    margin-left: 1.5rem;
+}
+
+.question, .answer, .footnote-wrapper {
+    color: var(--text-primary);
+    padding-bottom: 6.5rem;
+}
+
+input {
+    all: unset;
+    height: 10rem;
+}
+
+input, select, textarea {
+    color: var(--text-primary);
+}
+
+textarea:focus, input:focus {
+    color: var(--text-primary);
+}
+
+::placeholder {
+    color: var(--text-secondary);
+}
+
+.answer, .footnote-wrapper {
+    display: none;
+}
+
+.link {
+    color: var(--text-primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.source {
+    color: var(--text-primary);
+}
+
+.link:hover {
+    color: var(--text-secondary);
+}
+
+.footnote-folio {
+    margin-top: 0;
+}
+
+.footnote-wrapper {
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.footnote-wrapper > p {
+    margin-bottom: 1rem;
+}
+
+#time-value {
+    color: crimson;
+}
+
+#earnings-value {
+    color: green;
+}
+
+@media(max-width: 800px) {
+
+    main, .footnote-wrapper {
+        margin: 0 2rem 0;
+    }
+
+    .display {
+        font-size: 3rem;
+    }
+
+    input {
+        height: 4rem;
+    }
+
+    .folio {
+        margin: 0.5rem;
+        grid-column: 1 / 2;
+    }
+
+    .body-wrapper {
+        grid-column: 3 / 15;
+        margin-left: 1rem;
+    }
+
+}

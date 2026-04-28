@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>time is money</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <main>
+            <!-- <div class="folio-wrapper"></div> -->
+            <p class="mono folio">Q</p>
+            <p class="display question body-wrapper">How much do you earn per hour?</p>
+            <p class="mono folio">A</p>
+            <div class="body-wrapper input-wrapper" style="display: flex; align-items: baseline;">
+                <p class="display question" id="dollar-sign" style="display: inline;">$</p>
+                <input style="display: inline;"
+                    class="display"
+                    type="number"
+                    required
+                    min="0.10"
+                    step="0.10"
+                    placeholder="Enter amount..."
+                />
+            </div>
+            <p class="display answer body-wrapper">
+                You earn $<span id="value"></span> per hour. You have spent <span id="time-value">0 seconds</span> on this website. In this time, you could have earned <span id="earnings-value">$0</span>.
+            </p>
+        </main>
+        <div class="footnote-wrapper">
+            <p class="mono folio footnote-folio" id="reload"><a class="source link" href="index.html">
+                ↻
+            </a></p>
+        </div>
+        <script src="script.js" async defer></script>
+    </body> 
+</html>
