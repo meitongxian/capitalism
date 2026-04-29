@@ -114,11 +114,11 @@ textarea:focus, input:focus {
 }
 
 #time-value {
-    color: crimson;
+    color: green;
 }
 
 #earnings-value {
-    color: green;
+    color: crimson;
 }
 
 @media(max-width: 800px) {

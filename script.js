@@ -20,7 +20,7 @@ function inputSubmitted() {
 
     const timer = setInterval(() => {
       count++;
-      earningsValue.innerHTML = "$" + ((input.value / 3600)*count).toFixed(2);
+      earningsValue.innerHTML = `- $` + ((input.value / 3600)*count).toFixed(2);
       timeValue.innerHTML = formatTime(count);
     }, 1000);
 
@@ -49,5 +49,5 @@ function formatTime(totalSeconds) {
     timeString = hours + " hour, " + minutes + " minutes, and " + seconds + " seconds";
   }
 
-  return timeString;
+  return "+ " + timeString;
 }
